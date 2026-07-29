@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0B132B;
+    --bg-card: #131F37;
+    --bg-accent: #111D38;
+    --primary-navy: #1D4ED8;
+    --primary-blue: #2563EB;
+    --light-blue: #38BDF8;
+    --slate-muted: #94A3B8;
+    --border-navy: #1E2F4D;
+    --text-heading: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-body: #E2E8F0;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    animation: pageEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* Page Transition Keyframes (Opacity only to prevent containing block bug on fixed elements) */
+@keyframes pageEnter {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Modal Pop Animation */
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-modal-pop {
+  animation: modalPop 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar - Navy Tones */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0B132B;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2F4D;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Smooth Navbar Hover Styles */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  border-radius: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+  background-color: rgba(37, 99, 235, 0.15);
+  transform: translateY(-1px);
+}
+
+.nav-link.active-link {
+  color: #38BDF8;
+  font-weight: 700;
+  background-color: rgba(37, 99, 235, 0.2);
+}
+
+.nav-link.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 2.5px;
+  background-color: #38BDF8;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Navy Tones Cards */
+.card-emerald, .card-natural, .card-navy {
+  background: #131F37;
+  border: 1px solid #1E2F4D;
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+.card-emerald:hover, .card-natural:hover, .card-navy:hover {
+  border-color: #2563EB;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -6px rgba(37, 99, 235, 0.25);
+}
+
+/* Navy Tones Buttons */
+.btn-forest, .btn-primary, .btn-navy {
+  background: #2563EB;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.btn-forest:hover, .btn-primary:hover, .btn-navy:hover {
+  background: #1D4ED8;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-sage, .btn-secondary {
+  background: #1E2F4D;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.btn-sage:hover, .btn-secondary:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Legacy support alias for btn-maroon to point to navy blue button */
+.btn-maroon {
+  background: #2563EB;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.btn-maroon:hover {
+  background: #1D4ED8;
+  color: #FFFFFF;
+  box-shadow: 0 6px 22px rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Navy Badge */
+.badge-sage, .badge-maroon, .badge-navy {
+  background-color: #2563EB;
+  color: #FFFFFF;
+}
+
+/* Pulse animation for floating WhatsApp */
+@keyframes floatPulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 18px 32px rgba(37, 211, 102, 0.55);
+  }
+}
+
+.animate-wa-pulse {
+  animation: floatPulse 3s infinite ease-in-out;
+}
+
+/* Accordion FAQ active state */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}

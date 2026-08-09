@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gemilangkatunoutbound.web.id/sitemap.xml

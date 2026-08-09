@@ -304,7 +304,7 @@
             .btn-back-top { width: 40px; height: 40px; font-size: 18px; }
         }
     
-        /* --- LIGHT MAROON THEME OVERRIDES --- */\n
+        /* --- LIGHT MAROON THEME OVERRIDES --- */
         
         /* Override 3: Fix Stats and Alignment */
         .stats-section .stat-number { color: var(--accent-blue) !important; }
@@ -315,7 +315,7 @@
         /* Flexbox for equal height cards in paket.html */
         .pricing-card { display: flex !important; flex-direction: column !important; height: 100% !important; }
         .pricing-card .mt-auto { margin-top: auto !important; }
-\n        
+        
         /* Override 4: Final Fixes for Visibility and Layout */
         .stats-section .stat-label { color: #ffffff !important; }
         .stats-section .stat-number { color: #ff4d4d !important; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
@@ -325,7 +325,7 @@
         
         /* Fix text-grey variable that was deleted */
         :root { --text-grey: #6c757d; }
-\n        /* Additional Overrides */
+        /* Additional Overrides */
         .text-light { color: #ffffff !important; }
         .text-grey { color: var(--text-dim) !important; }
         
@@ -397,7 +397,7 @@
         
         /* Subheading */
         .sub-heading { color: var(--accent-yellow) !important; }
-\n    </style>
+    </style>
 
 <style id="smart-visibility-fix">
     /* For Light Theme: Default white text to dark text so it's readable */
@@ -444,6 +444,19 @@
         footer input.form-control {
             color: #ffffff !important;
             background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+    </style>
+
+    <style>
+        /* Global Fix for Author Image Circle */
+        .author-img, .author-box img, .author-box .author-img {
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            aspect-ratio: 1/1 !important;
+            width: 80px !important;
+            height: 80px !important;
+            flex-shrink: 0 !important;
+            display: block !important;
         }
     </style>
 </head>
@@ -494,10 +507,33 @@
         </div>
     </nav>
 
-    <section class="page-header text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold">GALERI KEGIATAN</h1>
-            <p class="lead text-dim">Dokumentasi momen seru, kebersamaan, dan petualangan.</p>
+                <!-- PREMIUM PAGE HEADER -->
+    <section class="page-header position-relative pt-5 pb-5" style="background: url('asset/img/Kegiatan Outboond/16_9/20260724_141514_0000.webp') center center/cover no-repeat; min-height: 350px; display: flex; align-items: center; border-bottom: 4px solid var(--accent-yellow, #f39c12);">
+        <!-- Dark Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(100, 0, 0, 0.7) 100%); z-index: 0;"></div>
+        
+        <!-- Texture Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'2\' cy=\'2\' r=\'1\' fill=\'rgba(255,255,255,0.05)\'/%3E%3C/svg%3E'); z-index: 0;"></div>
+
+        <div class="container position-relative mt-4" style="z-index: 1;">
+            <div class="row">
+                <div class="col-lg-8 text-start">
+                    <div class="d-inline-flex align-items-center mb-3 px-3 py-1 rounded-pill" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);" data-aos="fade-right">
+                        <i class="fas fa-campground me-2" style="color: var(--accent-yellow, #f1c40f);"></i>
+                        <span class="text-white fw-bold" style="letter-spacing: 1px; font-size: 0.75rem; text-transform: uppercase;">GEMILANG KATUN OUTBOUND</span>
+                    </div>
+                    
+                    <h1 class="display-4 fw-bold text-white mb-3 text-uppercase" data-aos="fade-right" data-aos-delay="100" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                        GALERI KEGIATAN
+                    </h1>
+                    
+                    <div class="mb-4" style="height: 4px; width: 60px; background-color: var(--accent-yellow, #f1c40f); border-radius: 2px;" data-aos="fade-right" data-aos-delay="200"></div>
+                    
+                    <p class="mb-0 text-light" style="font-size: 1.15rem; line-height: 1.6; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);" data-aos="fade-right" data-aos-delay="300">
+                        Dokumentasi momen seru, kebersamaan, dan petualangan.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -516,7 +552,7 @@
                         <div class="bg-primary bg-opacity-25 p-3 rounded-circle me-3 border border-primary border-opacity-50">
                             <i class="fas fa-camera-retro text-primary fs-4"></i>
                         </div>
-                        <h4 class="text-white mb-0 fw-bold">SPOTLIGHT</h4>
+                        <h4 class="text-dark mb-0 fw-bold">SPOTLIGHT</h4>
                     </div>
                     
                     <p class="text-dim mb-4" style="line-height: 1.8; font-size: 1.05rem;">

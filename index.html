@@ -1155,6 +1155,19 @@
             background-color: rgba(255, 255, 255, 0.15) !important;
         }
     </style>
+
+    <style>
+        /* Global Fix for Author Image Circle */
+        .author-img, .author-box img, .author-box .author-img {
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            aspect-ratio: 1/1 !important;
+            width: 80px !important;
+            height: 80px !important;
+            flex-shrink: 0 !important;
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body id="home">
@@ -1367,7 +1380,7 @@
     </div>
 
     <section class="py-5">
-        <div class="container py-5">
+        <div class="container py-3">
             <div class="text-center mb-5">
                 <span class="sub-heading">PROSES MUDAH</span>
                 <h2>CARA RESERVASI JADWAL</h2>
@@ -1405,7 +1418,7 @@
     </section>
 
     <section id="gallery" class="py-5">
-        <div class="container py-5">
+        <div class="container py-3">
             <div class="text-center mb-5">
                 <span class="sub-heading">DOKUMENTASI AKSI</span>
                 <h2>GALERI OUTBOUND</h2>
@@ -1553,8 +1566,350 @@
         </div>
     </section>
 
-    <section id="fasilitas" class="py-5">
+    <!-- ARTIKEL SECTION -->
+    <section id="artikel" class="py-5" style="background-color: var(--bg-main);">
         <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="sub-heading">INFO & EDUKASI</span>
+                <h2>ARTIKEL TERBARU</h2>
+                <p class="text-dim">Temukan tips dan informasi menarik seputar kegiatan outbound.</p>
+            </div>
+            
+            <div class="row g-4 align-items-stretch">
+                <!-- Article 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 d-flex flex-column border-0 shadow-sm" data-aos="fade-up">
+                        <img src="asset/img/Kegiatan Outboond/karyawan-tertawa-bersama-direksi.webp" class="card-img-top" alt="Arung Jeram Corporate Gathering" style="height: 220px; object-fit: cover;" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="d-flex align-items-center mb-3" style="font-size: 0.85rem; color: var(--accent-yellow);">
+                                <i class="fas fa-calendar-alt me-2"></i> 05 Agu 2024
+                            </div>
+                            <h4 class="card-title mb-3" style="font-size: 1.25rem;">
+                                <a href="jasa-provider-arung-jeram-corporate-gathering.html" class="text-decoration-none text-light" style="transition: color 0.3s;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color=''">Jasa Provider Arung Jeram Profesional untuk Corporate Gathering</a>
+                            </h4>
+                            <p class="card-text text-dim mb-4" style="font-size: 0.95rem;">Provider profesional menyediakan instruktur, peralatan safety, dan pendamping medis dalam satu paket yang sangat cocok...</p>
+                            <a href="jasa-provider-arung-jeram-corporate-gathering.html" class="mt-auto fw-bold text-decoration-none" style="color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif;">BACA SELENGKAPNYA <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 d-flex flex-column border-0 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0010.webp" class="card-img-top" alt="Corporate Gathering Sukses" style="height: 220px; object-fit: cover;" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="d-flex align-items-center mb-3" style="font-size: 0.85rem; color: var(--accent-yellow);">
+                                <i class="fas fa-calendar-alt me-2"></i> 12 Jan 2024
+                            </div>
+                            <h4 class="card-title mb-3" style="font-size: 1.25rem;">
+                                <a href="5-tips-sukses-mengadakan-corporate-gathering.html" class="text-decoration-none text-light" style="transition: color 0.3s;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color=''">5 Tips Sukses Mengadakan Corporate Gathering</a>
+                            </h4>
+                            <p class="card-text text-dim mb-4" style="font-size: 0.95rem;">Persiapan yang matang adalah kunci kesuksesan gathering perusahaan. Pelajari langkah-langkah penting untuk membuat acara...</p>
+                            <a href="5-tips-sukses-mengadakan-corporate-gathering.html" class="mt-auto fw-bold text-decoration-none" style="color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif;">BACA SELENGKAPNYA <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card h-100 d-flex flex-column border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0000.webp" class="card-img-top" alt="Safety Gear Rafting" style="height: 220px; object-fit: cover;" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="d-flex align-items-center mb-3" style="font-size: 0.85rem; color: var(--accent-yellow);">
+                                <i class="fas fa-calendar-alt me-2"></i> 08 Feb 2024
+                            </div>
+                            <h4 class="card-title mb-3" style="font-size: 1.25rem;">
+                                <a href="pentingnya-safety-gear-dalam-kegiatan-rafting.html" class="text-decoration-none text-light" style="transition: color 0.3s;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color=''">Pentingnya Safety Gear dalam Kegiatan Rafting</a>
+                            </h4>
+                            <p class="card-text text-dim mb-4" style="font-size: 0.95rem;">Keamanan selalu menjadi prioritas utama. Ketahui fungsi helm, pelampung, dan standar keselamatan internasional yang kami...</p>
+                            <a href="pentingnya-safety-gear-dalam-kegiatan-rafting.html" class="mt-auto fw-bold text-decoration-none" style="color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif;">BACA SELENGKAPNYA <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="blog.html" class="btn btn-outline-custom">LIHAT SEMUA ARTIKEL</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI SECTION -->
+    <section id="testimoni" class="pt-3 pb-5 bg-black">
+        <div class="container pt-2 pb-5">
+            <div class="text-center mb-5">
+                <span class="sub-heading">KATA MEREKA</span>
+                <h2 class="text-white">PENGALAMAN KLIEN KAMI</h2>
+            </div>
+            
+            <div id="testimonialCarousel" class="carousel slide px-2 px-md-5" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner px-3">
+                    <!-- Slide 1 (Card 1, 2, 3) -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <!-- Card 1 (AS) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-yellow) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-blue);">
+                                            AS
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h5>
+                                            <small class="text-dim">PT Jaya Abadi</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Instrukturnya sangat profesional! Kegiatan gathering tahunan kami jadi jauh lebih seru dan berkesan. Semua tim merasa lebih kompak setelah acara ini."</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 2 (BS) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-blue) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-yellow);">
+                                            BS
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h5>
+                                            <small class="text-dim">Komunitas Pecinta Alam</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Rafting dengan Gemilang Katun sungguh menantang tapi tetap aman. Perlengkapannya standar internasional. Terima kasih untuk pelayanannya yang luar biasa!"</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 3 (CL) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-yellow) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-blue);">
+                                            CL
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h5>
+                                            <small class="text-dim">BEM Universitas Y</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Harga terjangkau untuk mahasiswa namun kualitas tidak main-main. Lokasinya strategis dan mudah diakses. Sangat direkomendasikan untuk makrab kampus."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 (Card 2, 3, 4) -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <!-- Card 2 (BS) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-blue) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-yellow);">
+                                            BS
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h5>
+                                            <small class="text-dim">Komunitas Pecinta Alam</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Rafting dengan Gemilang Katun sungguh menantang tapi tetap aman. Perlengkapannya standar internasional. Terima kasih untuk pelayanannya yang luar biasa!"</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 3 (CL) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-yellow) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-blue);">
+                                            CL
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h5>
+                                            <small class="text-dim">BEM Universitas Y</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Harga terjangkau untuk mahasiswa namun kualitas tidak main-main. Lokasinya strategis dan mudah diakses. Sangat direkomendasikan untuk makrab kampus."</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 4 (DA) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-blue) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-yellow);">
+                                            DA
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h5>
+                                            <small class="text-dim">HRD Bank Z</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Sangat terbantu dengan layanan dari Gemilang Katun. Koordinasinya rapi, tempat bersih, dan seluruh peserta pulang dengan wajah gembira."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 (Card 3, 4, 1) -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <!-- Card 3 (CL) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-yellow) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-blue);">
+                                            CL
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h5>
+                                            <small class="text-dim">BEM Universitas Y</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Harga terjangkau untuk mahasiswa namun kualitas tidak main-main. Lokasinya strategis dan mudah diakses. Sangat direkomendasikan untuk makrab kampus."</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 4 (DA) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-blue) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-yellow);">
+                                            DA
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h5>
+                                            <small class="text-dim">HRD Bank Z</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Sangat terbantu dengan layanan dari Gemilang Katun. Koordinasinya rapi, tempat bersih, dan seluruh peserta pulang dengan wajah gembira."</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 1 (AS) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-yellow) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-blue);">
+                                            AS
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h5>
+                                            <small class="text-dim">PT Jaya Abadi</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Instrukturnya sangat profesional! Kegiatan gathering tahunan kami jadi jauh lebih seru dan berkesan. Semua tim merasa lebih kompak setelah acara ini."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 (Card 4, 1, 2) -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 col-md-4">
+                                <!-- Card 4 (DA) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-blue) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-yellow);">
+                                            DA
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h5>
+                                            <small class="text-dim">HRD Bank Z</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Sangat terbantu dengan layanan dari Gemilang Katun. Koordinasinya rapi, tempat bersih, dan seluruh peserta pulang dengan wajah gembira."</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 1 (AS) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-yellow) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-blue);">
+                                            AS
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h5>
+                                            <small class="text-dim">PT Jaya Abadi</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Instrukturnya sangat profesional! Kegiatan gathering tahunan kami jadi jauh lebih seru dan berkesan. Semua tim merasa lebih kompak setelah acara ini."</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 d-none d-md-block">
+                                <!-- Card 2 (BS) -->
+                                <div class="card bg-dark border-0 p-4 shadow-sm mx-auto h-100" style="border-radius: 16px; border-top: 4px solid var(--accent-blue) !important;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold fs-5 shadow-sm flex-shrink-0" style="width: 50px; height: 50px; background-color: var(--accent-yellow);">
+                                            BS
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h5>
+                                            <small class="text-dim">Komunitas Pecinta Alam</small>
+                                        </div>
+                                    </div>
+                                    <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-dim mb-0" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">"Rafting dengan Gemilang Katun sungguh menantang tapi tetap aman. Perlengkapannya standar internasional. Terima kasih untuk pelayanannya yang luar biasa!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" style="width: 50px; left: 0;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" style="width: 50px; right: 0;">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- Carousel Indicators -->
+            <div class="d-flex justify-content-center mt-4">
+                <div class="carousel-indicators position-relative m-0">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-secondary" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-secondary" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-secondary" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" class="bg-secondary" aria-label="Slide 4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fasilitas" class="pt-2 pb-5">
+        <div class="container pt-2 pb-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
                     <span class="sub-heading">KENYAMANAN ANDA</span>
@@ -1681,6 +2036,32 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- PREMIUM CTA SECTION -->
+    <section class="cta-section py-5 position-relative" style="background: linear-gradient(rgba(77, 0, 0, 0.85), rgba(128, 0, 0, 0.9)), url('asset/img/Kegiatan Outboond/16_9/20260724_141514_0007.webp') center/cover fixed; overflow: hidden; border-top: 4px solid var(--accent-yellow);">
+        <div class="container py-3 text-center" style="position: relative; z-index: 2;">
+            <div data-aos="zoom-in" data-aos-duration="800">
+                <span class="badge mb-3 px-3 py-2 text-uppercase" style="background: var(--accent-yellow); color: #ffffff !important; letter-spacing: 2px; font-weight: 600; font-family: 'Inter', sans-serif;">Penawaran Spesial</span>
+                <h2 class="mb-3" style="font-size: 2.5rem; font-weight: 800; color: #ffffff !important; letter-spacing: 1px; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    BOSAN DENGAN RUTINITAS KANTOR?
+                </h2>
+                <p class="mb-4 mx-auto" style="max-width: 800px; color: #f8f9fa !important; font-size: 1.1rem; line-height: 1.6; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">
+                    Waktunya segarkan pikiran, pererat kebersamaan, dan pacu adrenalin tim Anda! Dapatkan pengalaman Outbound & Rafting terbaik dengan fasilitas eksklusif dan instruktur profesional.
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="paket.html" class="btn btn-outline-light px-4 py-2 fw-bold text-uppercase" style="border-width: 2px; border-radius: 50px; color: #ffffff !important; border-color: #ffffff !important; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='var(--accent-blue)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff'">
+                        LIHAT PAKET
+                    </a>
+                    <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20tertarik%20dengan%20layanan%20Gemilang%20Katun!" class="btn px-4 py-2 fw-bold text-uppercase" style="background-color: #25d366; color: #ffffff !important; border-radius: 50px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); border: none; transition: 0.3s transform;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <i class="fab fa-whatsapp me-2 fs-5"></i> KONSULTASI GRATIS
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Animated Particles / Glows -->
+        <div class="position-absolute" style="top: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
+        <div class="position-absolute" style="bottom: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
     </section>
 
     <footer>

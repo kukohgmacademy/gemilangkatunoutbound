@@ -435,6 +435,19 @@
             background-color: rgba(255, 255, 255, 0.15) !important;
         }
     </style>
+
+    <style>
+        /* Global Fix for Author Image Circle */
+        .author-img, .author-box img, .author-box .author-img {
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            aspect-ratio: 1/1 !important;
+            width: 80px !important;
+            height: 80px !important;
+            flex-shrink: 0 !important;
+            display: block !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Premium Interactive Elements HTML -->
@@ -478,10 +491,33 @@
         </div>
     </nav>
 
-    <section class="page-header text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold">PILIHAN PAKET</h1>
-            <p class="lead text-dim">Pilih strategi perangmu. Dari pemula hingga profesional.</p>
+                <!-- PREMIUM PAGE HEADER -->
+    <section class="page-header position-relative pt-5 pb-5" style="background: url('asset/img/Kegiatan Outboond/16_9/20260724_141514_0000.webp') center center/cover no-repeat; min-height: 350px; display: flex; align-items: center; border-bottom: 4px solid var(--accent-yellow, #f39c12);">
+        <!-- Dark Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(100, 0, 0, 0.7) 100%); z-index: 0;"></div>
+        
+        <!-- Texture Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'2\' cy=\'2\' r=\'1\' fill=\'rgba(255,255,255,0.05)\'/%3E%3C/svg%3E'); z-index: 0;"></div>
+
+        <div class="container position-relative mt-4" style="z-index: 1;">
+            <div class="row">
+                <div class="col-lg-8 text-start">
+                    <div class="d-inline-flex align-items-center mb-3 px-3 py-1 rounded-pill" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);" data-aos="fade-right">
+                        <i class="fas fa-campground me-2" style="color: var(--accent-yellow, #f1c40f);"></i>
+                        <span class="text-white fw-bold" style="letter-spacing: 1px; font-size: 0.75rem; text-transform: uppercase;">GEMILANG KATUN OUTBOUND</span>
+                    </div>
+                    
+                    <h1 class="display-4 fw-bold text-white mb-3 text-uppercase" data-aos="fade-right" data-aos-delay="100" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+                        PILIHAN PAKET
+                    </h1>
+                    
+                    <div class="mb-4" style="height: 4px; width: 60px; background-color: var(--accent-yellow, #f1c40f); border-radius: 2px;" data-aos="fade-right" data-aos-delay="200"></div>
+                    
+                    <p class="mb-0 text-light" style="font-size: 1.15rem; line-height: 1.6; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);" data-aos="fade-right" data-aos-delay="300">
+                        Pilih strategi perangmu. Dari pemula hingga profesional.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -552,20 +588,35 @@
                 </div>
             </div>
 
-            <div class="cta-section">
-                <i class="fas fa-shield-alt cta-bg-icon"></i>
-                <div class="position-relative z-1">
-                    <h2 class="display-5 text-white fw-bold mb-3">BUTUH PENAWARAN KHUSUS?</h2>
-                    <p class="text-white lead mb-4" style="max-width: 700px; margin: 0 auto;">
-                        Kami menyediakan paket custom untuk sekolah, kampus, atau event organizer dengan harga spesial.
-                    </p>
-                    <a href="https://wa.me/6282211221909" class="btn btn-light btn-lg fw-bold text-primary px-5 py-3">
-                        <i class="fab fa-whatsapp me-2"></i> HUBUNGI KAMI
+
+
+        </div>
+    </section>
+
+    <!-- PREMIUM CTA SECTION -->
+    <section class="py-5 position-relative" style="background: linear-gradient(rgba(77, 0, 0, 0.85), rgba(128, 0, 0, 0.9)), url('asset/img/Kegiatan Outboond/16_9/20260724_141514_0007.webp') center/cover fixed; overflow: hidden; border-top: 4px solid var(--accent-yellow);">
+        <div class="container py-3 text-center" style="position: relative; z-index: 2;">
+            <div data-aos="zoom-in" data-aos-duration="800">
+                <span class="badge mb-3 px-3 py-2 text-uppercase" style="background: var(--accent-yellow); color: #ffffff !important; letter-spacing: 2px; font-weight: 600; font-family: 'Inter', sans-serif;">Penawaran Spesial</span>
+                <h2 class="mb-3" style="font-size: 2.5rem; font-weight: 800; color: #ffffff !important; letter-spacing: 1px; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    BOSAN DENGAN RUTINITAS KANTOR?
+                </h2>
+                <p class="mb-4 mx-auto" style="max-width: 800px; color: #f8f9fa !important; font-size: 1.1rem; line-height: 1.6; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">
+                    Waktunya segarkan pikiran, pererat kebersamaan, dan pacu adrenalin tim Anda! Dapatkan pengalaman Outbound & Rafting terbaik dengan fasilitas eksklusif dan instruktur profesional.
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="paket.html" class="btn btn-outline-light px-4 py-2 fw-bold text-uppercase" style="border-width: 2px; border-radius: 50px; color: #ffffff !important; border-color: #ffffff !important; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='var(--accent-blue)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff'">
+                        LIHAT PAKET
+                    </a>
+                    <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20tertarik%20dengan%20layanan%20Gemilang%20Katun!" class="btn px-4 py-2 fw-bold text-uppercase" style="background-color: #25d366; color: #ffffff !important; border-radius: 50px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); border: none; transition: 0.3s transform;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <i class="fab fa-whatsapp me-2 fs-5"></i> KONSULTASI GRATIS
                     </a>
                 </div>
             </div>
-
         </div>
+        <!-- Animated Particles / Glows -->
+        <div class="position-absolute" style="top: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
+        <div class="position-absolute" style="bottom: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
     </section>
 
             <footer>

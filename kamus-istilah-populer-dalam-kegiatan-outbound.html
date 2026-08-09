@@ -237,7 +237,7 @@
             margin-top: 40px;
             border: 1px solid var(--border-line);
         }
-        .author-img { width: 80px !important; height: 80px !important; flex-shrink: 0; border-radius: 50%; object-fit: cover; margin-right: 20px; border: 2px solid var(--accent-blue); }
+        .author-img { width: 80px !important; height: 80px !important; aspect-ratio: 1/1 !important; flex-shrink: 0; border-radius: 50%; object-fit: cover; margin-right: 20px; border: 2px solid var(--accent-blue); }
         .author-info h5 { margin: 0 0 5px; color: var(--accent-gold); }
         .author-info p { margin: 0; font-size: 0.9rem; color: var(--text-grey); }
 
@@ -448,7 +448,7 @@
             .btn-back-top { width: 40px; height: 40px; font-size: 18px; }
         }
     
-        /* --- LIGHT MAROON THEME OVERRIDES --- */\n
+        /* --- LIGHT MAROON THEME OVERRIDES --- */
         
         /* Override 3: Fix Stats and Alignment */
         .stats-section .stat-number { color: var(--accent-blue) !important; }
@@ -459,7 +459,7 @@
         /* Flexbox for equal height cards in paket.html */
         .pricing-card { display: flex !important; flex-direction: column !important; height: 100% !important; }
         .pricing-card .mt-auto { margin-top: auto !important; }
-\n        
+        
         /* Override 4: Final Fixes for Visibility and Layout */
         .stats-section .stat-label { color: #ffffff !important; }
         .stats-section .stat-number { color: #ff4d4d !important; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
@@ -469,7 +469,7 @@
         
         /* Fix text-grey variable that was deleted */
         :root { --text-grey: #6c757d; }
-\n        /* Additional Overrides */
+        /* Additional Overrides */
         .text-light { color: #ffffff !important; }
         .text-grey { color: var(--text-dim) !important; }
         
@@ -541,7 +541,7 @@
         
         /* Subheading */
         .sub-heading { color: var(--accent-yellow) !important; }
-\n    </style>
+    </style>
 
 <style id="smart-visibility-fix">
     /* For Light Theme: Default white text to dark text so it's readable */
@@ -591,6 +591,19 @@
         footer input.form-control {
             color: #ffffff !important;
             background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+    </style>
+
+    <style>
+        /* Global Fix for Author Image Circle */
+        .author-img, .author-box img, .author-box .author-img {
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            aspect-ratio: 1/1 !important;
+            width: 80px !important;
+            height: 80px !important;
+            flex-shrink: 0 !important;
+            display: block !important;
         }
     </style>
 </head>
@@ -657,7 +670,7 @@
                         <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0009.webp" alt="Kamus Istilah dalam Kegiatan Outbound" class="article-img">
                         
                         <div class="article-meta">
-                            <span class="me-3"><i class="fas fa-calendar"></i> 10 Mar 2024</span>
+                            <span class="me-3"><i class="fas fa-calendar-alt"></i> 05 Aug 2026</span>
                             <span class="me-3"><i class="fas fa-folder"></i> Tips Pemula</span>
                             <span class="me-3"><i class="fas fa-comments"></i> 5 Komentar</span>
                         </div>
@@ -738,28 +751,28 @@
                     <div class="row g-4 mb-5">
                         <div class="col-md-4">
                             <div class="related-card" data-aos="fade-up">
-                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0007.webp" class="related-thumb" alt="Tips Persiapan Fisik Sebelum Rafting" loading="lazy">
+                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0000.webp" class="related-thumb" alt="Pentingnya Safety Gear dalam Kegiatan Rafting" loading="lazy">
                                 <div class="related-content">
-                                    <h6 class="related-title mb-2"><a href="tips-persiapan-fisik-sebelum-mengikuti-rafting.html">Tips Persiapan Fisik Sebelum Rafting</a></h6>
-                                    <small class="text-grey">05 Mei 2024</small>
+                                    <h6 class="related-title mb-2"><a href="pentingnya-safety-gear-dalam-kegiatan-rafting.html">Pentingnya Safety Gear dalam Kegiatan Rafting</a></h6>
+                                    <small class="text-grey">25 Jan 2024</small>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="related-card" data-aos="fade-up">
-                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0010.webp" class="related-thumb" alt="Tips Sukses Mengadakan Corporate Gathering" loading="lazy">
+                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0010.webp" class="related-thumb" alt="5 Tips Sukses Mengadakan Corporate Gathering" loading="lazy">
                                 <div class="related-content">
-                                    <h6 class="related-title mb-2"><a href="5-tips-sukses-mengadakan-corporate-gathering.html">Tips Sukses Mengadakan Corporate Gathering</a></h6>
+                                    <h6 class="related-title mb-2"><a href="5-tips-sukses-mengadakan-corporate-gathering.html">5 Tips Sukses Mengadakan Corporate Gathering</a></h6>
                                     <small class="text-grey">12 Jan 2024</small>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="related-card" data-aos="fade-up">
-                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0000.webp" class="related-thumb" alt="Pentingnya Safety Gear dalam Kegiatan Rafting" loading="lazy">
+                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0002.webp" class="related-thumb" alt="Psikologi Adrenalin di Balik Derasnya Arus Sungai" loading="lazy">
                                 <div class="related-content">
-                                    <h6 class="related-title mb-2"><a href="pentingnya-safety-gear-dalam-kegiatan-rafting.html">Pentingnya Safety Gear dalam Kegiatan Rafting</a></h6>
-                                    <small class="text-grey">08 Feb 2024</small>
+                                    <h6 class="related-title mb-2"><a href="psikologi-adrenalin-di-balik-derasnya-arus-sungai.html">Psikologi Adrenalin di Balik Derasnya Arus Sungai</a></h6>
+                                    <small class="text-grey">03 Mar 2024</small>
                                 </div>
                             </div>
                         </div>
@@ -778,34 +791,28 @@
 
                         <div class="sidebar-widget">
                             <h4 class="widget-title">TERPOPULER</h4>
-                            
                             <div class="recent-post-item">
-                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0003.webp" class="recent-thumb" alt="Manfaat Team Building untuk Produktivitas Karyawan" loading="lazy">
+                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0006.webp" class="recent-thumb" alt="Pilihan Lokasi Outbound Terbaik di Kawasan Batu dan Malang" loading="lazy">
                                 <div class="recent-info">
-                                    <h6><a href="manfaat-team-building-untuk-produktivitas-karyawan.html">Manfaat Team Building untuk Produktivitas Karyawan</a></h6>
-                                    <span class="recent-date">20 Feb 2024</span>
+                                    <h6><a href="pilihan-lokasi-outbound-terbaik-di-kawasan-batu-dan-malang.html">Pilihan Lokasi Outbound Terbaik di Kawasan Batu...</a></h6>
+                                    <span class="recent-date">05 Aug 2026</span>
                                 </div>
                             </div>
                             <div class="recent-post-item">
-                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0011.webp" class="recent-thumb" alt="Mengenal Sejarah Kegiatan Outbound" loading="lazy">
+                                <img src="asset/img/Kegiatan Outboond/departemen-outbound-gathering.webp" class="recent-thumb" alt="Outbound Skala Kecil Kantor: Kenapa Lebih Gampang Diatur" loading="lazy">
                                 <div class="recent-info">
-                                    <h6><a href="mengenal-sejarah-dan-perkembangan-outbound.html">Mengenal Sejarah Kegiatan Outbound</a></h6>
-                                    <span class="recent-date">05 Mar 2024</span>
+                                    <h6><a href="outbound-skala-kecil-kantor-lebih-gampang-diatur-hr.html">Outbound Skala Kecil Kantor: Kenapa Lebih Gampa...</a></h6>
+                                    <span class="recent-date">06 Aug 2026</span>
                                 </div>
                             </div>
                             <div class="recent-post-item">
-                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0006.webp" class="recent-thumb" alt="Pilihan Lokasi Outbound Terbaik di Batu" loading="lazy">
+                                <img src="asset/img/Kegiatan Outboond/16_9/20260724_141514_0003.webp" class="recent-thumb" alt="Manfaat Team Building Untuk Produktivitas Karyawan" loading="lazy">
                                 <div class="recent-info">
-                                    <h6><a href="pilihan-lokasi-outbound-terbaik-di-kawasan-batu-dan-malang.html">Pilihan Lokasi Outbound Terbaik di Batu</a></h6>
-                                    <span class="recent-date">25 Mar 2024</span>
+                                    <h6><a href="manfaat-team-building-untuk-produktivitas-karyawan.html">Manfaat Team Building Untuk Produktivitas Karyawan</a></h6>
+                                    <span class="recent-date">05 Aug 2026</span>
                                 </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+</div>
         </div>
     </section>
 
@@ -935,9 +942,4 @@
     </script>
 </body>
 </html>
-
-
-
-
-
 

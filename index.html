@@ -72,16 +72,16 @@
       "priceRange": "Rp 85.000 - Rp 250.000",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Jl. Raya Tlogomas No. 99",
-        "addressLocality": "Lowokwaru",
-        "addressRegion": "Kota Malang",
-        "postalCode": "65144",
+        "streetAddress": "Jl. Wukir Gg Gor perdamain, Gedang Klutuk",
+        "addressLocality": "Temas, Kec. Batu",
+        "addressRegion": "Kota Batu",
+        "postalCode": "65315",
         "addressCountry": "ID"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": -7.933333,
-        "longitude": 112.600000
+        "latitude": -7.878191,
+        "longitude": 112.527357
       },
       "sameAs": [
         "https://www.facebook.com/gemilangkatun",
@@ -204,19 +204,86 @@
             padding: 8px 20px;
         }
 
-        /* HERO SECTION (Original Design Restored) */
+        /* HERO SECTION STYLES - MAROON BRAND THEME */
         .hero-section {
-            padding: 40px 0 120px;
-            /* Menggunakan CSS background agar layout AMAN */
-            /* background replaced by carousel */
-            background-size: cover;
-            background-position: center;
+            padding: 120px 0 120px;
+            position: relative;
+            background-color: #0b0f19;
         }
 
         .hero-badge {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--accent-green);
-            color: var(--accent-green);
+            background: rgba(128, 0, 0, 0.4) !important;
+            border: 1px solid rgba(220, 38, 38, 0.6) !important;
+            color: #ffffff !important;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(128, 0, 0, 0.5);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .hero-section h1 {
+            color: #ffffff !important;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9) !important;
+            line-height: 1.25;
+            font-size: calc(1.8rem + 1.8vw);
+        }
+
+        .hero-highlight-red {
+            color: #ff4d4d !important;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff3333 50%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.9));
+        }
+
+        .hero-section p.lead {
+            color: rgba(241, 245, 249, 0.95) !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+            font-size: 1.1rem;
+            line-height: 1.65;
+        }
+
+        .hero-section .btn-hero-primary {
+            background: linear-gradient(135deg, #800000 0%, #b30000 100%) !important;
+            border: 2px solid #dc2626 !important;
+            color: #ffffff !important;
+            box-shadow: 0 6px 20px rgba(180, 0, 0, 0.5) !important;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 12px 30px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-section .btn-hero-primary:hover {
+            background: linear-gradient(135deg, #b30000 0%, #dc2626 100%) !important;
+            border-color: #ff4d4d !important;
+            color: #ffffff !important;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.6) !important;
+        }
+
+        .hero-section .btn-hero-outline {
+            background: rgba(15, 23, 42, 0.5) !important;
+            border: 2px solid rgba(255, 255, 255, 0.75) !important;
+            color: #ffffff !important;
+            backdrop-filter: blur(8px);
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 12px 30px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-section .btn-hero-outline:hover {
+            background: #ffffff !important;
+            border-color: #ffffff !important;
+            color: #800000 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3) !important;
         }
 
         /* --- TACTICAL ABOUT SECTION --- */
@@ -803,20 +870,14 @@
         }
 
         /* Hero Section (Keep Dark for Image) */
-        .hero-section {
-            background: linear-gradient(rgba(128, 0, 0, 0.8), rgba(255, 255, 255, 1)), url('asset/img/kegiatan/arah-terkena-cipratan-air-rafting.webp') !important;
-            background-size: cover !important;
-            background-position: center !important;
-        }
-
         .hero-section h1,
         .hero-section h2,
         .hero-section h3 {
             color: #ffffff !important;
         }
 
-        .hero-section .hero-section .text-dim {
-            color: #f8f9fa !important;
+        .hero-section .text-dim {
+            color: rgba(255, 255, 255, 0.92) !important;
         }
 
         /* Footer */
@@ -1224,34 +1285,34 @@
     </nav>
 
     <section class="hero-section text-center position-relative overflow-hidden"
-        style="background-color: var(--bg-darkest); padding: 120px 0;">
+        style="padding: 120px 0;">
         <!-- Background Carousel -->
         <div id="heroCarousel" class="carousel slide carousel-fade position-absolute w-100 h-100"
             data-bs-ride="carousel" data-bs-interval="4000" style="top: 0; left: 0; z-index: 0;">
             <div class="carousel-inner w-100 h-100">
                 <div class="carousel-item active w-100 h-100">
                     <div
-                        style="width: 100%; height: 100%; background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('asset/img/kegiatan/arah-terkena-cipratan-air-rafting.webp') center/cover;">
+                        style="width: 100%; height: 100%; background: linear-gradient(rgba(11, 15, 25, 0.65), rgba(11, 15, 25, 0.88)), url('asset/img/kegiatan/arah-terkena-cipratan-air-rafting.webp') center/cover;">
                     </div>
                 </div>
                 <div class="carousel-item w-100 h-100">
                     <div
-                        style="width: 100%; height: 100%; background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('asset/img/kegiatan/kegiatan-outbound-diarea-terbuka.webp') center/cover;">
+                        style="width: 100%; height: 100%; background: linear-gradient(rgba(11, 15, 25, 0.65), rgba(11, 15, 25, 0.88)), url('asset/img/kegiatan/kegiatan-outbound-diarea-terbuka.webp') center/cover;">
                     </div>
                 </div>
                 <div class="carousel-item w-100 h-100">
                     <div
-                        style="width: 100%; height: 100%; background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('asset/img/kegiatan/arah-terkena-cipratan-air-rafting.webp') center/cover;">
+                        style="width: 100%; height: 100%; background: linear-gradient(rgba(11, 15, 25, 0.65), rgba(11, 15, 25, 0.88)), url('asset/img/kegiatan/arah-terkena-cipratan-air-rafting.webp') center/cover;">
                     </div>
                 </div>
                 <div class="carousel-item w-100 h-100">
                     <div
-                        style="width: 100%; height: 100%; background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('asset/img/kegiatan/pegawai-instansi-mengikuti-sesi-team-building.webp') center/cover;">
+                        style="width: 100%; height: 100%; background: linear-gradient(rgba(11, 15, 25, 0.65), rgba(11, 15, 25, 0.88)), url('asset/img/kegiatan/pegawai-instansi-mengikuti-sesi-team-building.webp') center/cover;">
                     </div>
                 </div>
                 <div class="carousel-item w-100 h-100">
                     <div
-                        style="width: 100%; height: 100%; background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), url('asset/img/kegiatan/ice-breaking-gathering-departemen.webp') center/cover;">
+                        style="width: 100%; height: 100%; background: linear-gradient(rgba(11, 15, 25, 0.65), rgba(11, 15, 25, 0.88)), url('asset/img/kegiatan/ice-breaking-gathering-departemen.webp') center/cover;">
                     </div>
                 </div>
             </div>
@@ -1259,24 +1320,21 @@
 
         <div class="container position-relative" style="z-index: 1;">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-10">
                     <div class="d-inline-block px-3 py-1 rounded-pill mb-3 hero-badge">
-                        <small class="fw-bold tracking-wide"><i class="fas fa-check-circle me-1" aria-hidden="true"></i>
+                        <small class="fw-bold tracking-wide"><i class="fas fa-shield-alt me-2" style="color: #ff4d4d;" aria-hidden="true"></i>
                             PROVIDER OUTBOUND BATU MALANG</small>
                     </div>
-                    <h1 class="display-3 mb-4 text-white">JADIKAN MOMEN GATHERING<br>
-                        <span class="text-yellow">LEBIH MEMACU ADRENALIN</span>
+                    <h1 class="display-3 mb-4 text-white">PROVIDER OUTBOUND BATU MALANG<br>
+                        <span class="hero-highlight-red">SOLUSI GATHERING &amp; TEAM BUILDING SERU</span>
                     </h1>
-                    <p class="lead text-dim mb-5 mx-auto" style="max-width: 700px;">
-                        Kami menyediakan jasa penyewaan lapangan outbound lengkap dengan instruktur, peralatan
-                        keamanan, dan skenario permainan seru.
+                    <p class="lead mb-5 mx-auto text-hero-subtitle" style="max-width: 720px;">
+                        Kami hadir sebagai provider outbound terpercaya di Batu &amp; Malang, menyajikan program corporate gathering, team building, dan rafting seru dengan instruktur profesional serta fasilitas terbaik.
                     </p>
 
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="paket.html" class="btn btn-primary-custom btn-lg" aria-label="Cek Harga Paket">CEK
-                            HARGA PAKET</a>
-                        <a href="gallery.html" class="btn btn-outline-custom btn-lg"
-                            aria-label="Lihat Galeri Foto">LIHAT GALERI</a>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="paket.html" class="btn btn-hero-primary btn-lg" aria-label="Cek Harga Paket"><i class="fas fa-tags me-2"></i>CEK HARGA PAKET</a>
+                        <a href="gallery.html" class="btn btn-hero-outline btn-lg" aria-label="Lihat Galeri Foto"><i class="fas fa-images me-2"></i>LIHAT GALERI</a>
                     </div>
                 </div>
             </div>
@@ -1968,14 +2026,14 @@
                         <div
                             style="width: 100%; height: 400px; background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #555;">
                             <iframe title="Lokasi Gemilang Katun"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.210469275997!2d112.60742131477652!3d-7.977209994254823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788281bdd08839%3A0xc915f268bffa831f!2sUniversitas%20Negeri%20Malang!5e0!3m2!1sid!2sid!4v1679901234567!5m2!1sid!2sid"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.683517454848!2d112.5273574!3d-7.8781912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78810b248b5cef%3A0x1d5fccff85c98c38!2sJl.%20Wukir%20Gg.%20GOR%20Perdamaian%2C%20Gedang%20Klutuk%2C%20Temas%2C%20Kec.%20Batu%2C%20Kota%20Batu%2C%20Jawa%20Timur%2065315!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
                                 width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);"
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="card-body bg-dark border-top border-secondary" data-aos="fade-up">
                             <h5 class="text-dark"><i class="fas fa-map-marker-alt text-blue me-2"
                                     aria-hidden="true"></i>LOKASI BASECAMP</h5>
-                            <p class="text-dim small mb-0">Jl. Raya Tlogomas No. 99, Kec. Lowokwaru, Kota Malang.</p>
+                            <p class="text-dim small mb-0">Jl. Wukir Gg Gor perdamain, Gedang Klutuk, Temas, Kec. Batu, Kota Batu, Jawa Timur 65315</p>
                         </div>
                     </div>
                 </div>

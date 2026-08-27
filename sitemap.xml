@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gemilangkatunoutbound.web.id/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://gemilangkatunoutbound.web.id/blog.html</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -291,6 +291,18 @@
   <url>
     <loc>https://gemilangkatunoutbound.web.id/tips-sukses-corporate-gathering-berkesan.html</loc>
     <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/outbound-skala-kecil-kantor-untuk-hr.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gemilangkatunoutbound.web.id/checklist-persiapan-outbound-kantor.html</loc>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -343,4 +343,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/outbound-mahasiswa-malang-ide-bangun-kekompakan.html</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/outbound-sekolah-malang-ide-kegiatan-edukatif.html</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
 </urlset>

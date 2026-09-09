@@ -415,4 +415,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/outbound-leadership-malang-pengambilan-keputusan-leader.html</loc>
+        <lastmod>2026-09-09T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/outbound-problem-solving-malang-simulasi-pengambilan-keputusan.html</loc>
+        <lastmod>2026-09-09T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

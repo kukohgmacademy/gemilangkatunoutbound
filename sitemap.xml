@@ -451,4 +451,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/games-outbound-berdasarkan-jumlah-peserta-dan-durasi.html</loc>
+        <lastmod>2026-09-12T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/game-outbound-10-menit-7-pilihan.html</loc>
+        <lastmod>2026-09-12T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

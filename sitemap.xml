@@ -499,4 +499,17 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/paket-outbound-malang-2-hari-1-malam.html</loc>
+        <lastmod>2026-09-17T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/paket-outbound-rafting-malang.html</loc>
+        <lastmod>2026-09-17T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

@@ -487,4 +487,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/paket-outbound-malang-1-hari-rundown.html</loc>
+        <lastmod>2026-09-16T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gemilangkatunoutbound.web.id/paket-outbound-half-day-malang.html</loc>
+        <lastmod>2026-09-16T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

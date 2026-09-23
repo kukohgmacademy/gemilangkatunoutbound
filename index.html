@@ -42,21 +42,14 @@
     <link rel="icon" type="image/png" href="asset/img/logo/logo.png">
     <link rel="apple-touch-icon" href="asset/img/logo/favicon.webp">
 
-    <!-- Preconnect & Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <!-- Local Fonts & Async CSS -->
+    <link rel="stylesheet" href="asset/css/fonts.css">
+    <link rel="preload" href="asset/css/bootstrap-purged.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="asset/css/bootstrap-purged.min.css"></noscript>
+    <link rel="preload" href="asset/css/fontawesome-subset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="asset/css/fontawesome-subset.css"></noscript>
+    <link rel="preload" href="asset/css/aos-local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="asset/css/aos-local.css"></noscript>
 
     <!-- Schema.org JSON-LD (AEO/GEO Optimized) -->
     <script type="application/ld+json">
@@ -101,7 +94,7 @@
             /* Lighter Maroon replaces Yellow */
             --accent-green: #25d366;
             --text-light: #212529;
-            --text-dim: #6c757d;
+            --text-dim: #495057;
             --border-color: #e9ecef;
         }
 
@@ -895,7 +888,7 @@
             color: #ffffff !important;
         }
 
-        footer footer .text-dim {
+        footer .text-dim {
             color: #e9ecef !important;
         }
 
@@ -991,7 +984,7 @@
         }
 
         .mission-number {
-            color: rgba(128, 0, 0, 0.1) !important;
+            color: rgba(128, 0, 0, 0.75) !important;
         }
 
         .mission-title {
@@ -1138,6 +1131,30 @@
         .pricing-card .mt-auto {
             padding: 20px;
         }
+    
+        /* CLS Reservations & Contrast Fixes */
+        .text-hero-subtitle {
+            min-height: 80px;
+        }
+        @media (min-width: 768px) {
+            .text-hero-subtitle {
+                min-height: 56px;
+            }
+        }
+        .hero-btn-group {
+            min-height: 56px;
+        }
+        .bg-grid {
+            contain: paint layout;
+            pointer-events: none;
+        }
+        .text-warning.fst-italic {
+            color: #995c00 !important;
+        }
+        footer .text-dim {
+            color: #e2e8f0 !important;
+        }
+
     </style>
 
     <style id="smart-visibility-fix">
@@ -1185,8 +1202,7 @@
         }
     </style>
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 
     <!-- Premium Interactive Effects CSS -->
     <style>
@@ -1251,8 +1267,8 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" style="cursor: default;" aria-label="Homepage Gemilang Katun">
-                <img src="asset/img/logo/logo.png" alt="Logo Gemilang Katun"
+            <a class="navbar-brand d-flex align-items-center" href="/" aria-label="Homepage Gemilang Katun">
+                <img src="asset/img/logo/logo.png" alt="Logo Gemilang Katun" width="100" height="48"
                     style="height: 48px; width: auto; object-fit: contain;" class="me-2">
 
             </a>
@@ -1279,6 +1295,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <section class="hero-section text-center position-relative overflow-hidden"
         style="padding: 120px 0;">
         <!-- Background Carousel -->
@@ -1327,7 +1344,7 @@
                         Kami hadir sebagai provider outbound terpercaya di Batu &amp; Malang, menyajikan program corporate gathering, team building, dan rafting seru dengan instruktur profesional serta fasilitas terbaik.
                     </p>
 
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap hero-btn-group">
                         <a href="paket.html" class="btn btn-hero-primary btn-lg" aria-label="Cek Harga Paket"><i class="fas fa-tags me-2"></i>CEK HARGA PAKET</a>
                         <a href="gallery.html" class="btn btn-hero-outline btn-lg" aria-label="Lihat Galeri Foto"><i class="fas fa-images me-2"></i>LIHAT GALERI</a>
                     </div>
@@ -1388,13 +1405,15 @@
 
                         <div class="tactical-img-box">
                             <img src="asset/img/kegiatan/home/fun-games-lapangan.webp"
-                                alt="Gemilang Katun Action" width="600" height="450" loading="lazy">
+                                srcset="asset/img/kegiatan/home/fun-games-lapangan-mobile.webp 480w, asset/img/kegiatan/home/fun-games-lapangan.webp 800w"
+                                sizes="(max-width: 576px) 100vw, (max-width: 992px) 500px, 800px"
+                                alt="Gemilang Katun Action" width="800" height="450" fetchpriority="high">
                             <div class="scanline-overlay"></div>
                         </div>
 
                         <div class="position-absolute bottom-0 end-0 bg-primary text-white p-3 fw-bold shadow-lg"
                             style="background: var(--accent-blue); bottom: 20px; right: 20px;">
-                            <small class="d-block text-white-50" style="font-size: 0.7rem;">ESTABLISHED</small>
+                            <small class="d-block text-white" style="font-size: 0.7rem; opacity: 0.9;">ESTABLISHED</small>
                             2018
                         </div>
                     </div>
@@ -1438,8 +1457,8 @@
                 <div class="col-md-4">
                     <div class="step-card" data-aos="fade-up">
                         <span class="step-number">01</span>
-                        <h4 class="text-white mb-3 mt-2"><i class="fas fa-list-alt step-icon"
-                                aria-hidden="true"></i>PILIH PAKET</h4>
+                        <h3 class="h4 text-white mb-3 mt-2"><i class="fas fa-list-alt step-icon"
+                                aria-hidden="true"></i>PILIH PAKET</h3>
                         <p class="text-dim">Tentukan paket yang sesuai dengan budget dan jumlah peserta tim Anda (Min.
                             10 Orang).</p>
                     </div>
@@ -1447,8 +1466,8 @@
                 <div class="col-md-4">
                     <div class="step-card" data-aos="fade-up">
                         <span class="step-number">02</span>
-                        <h4 class="text-white mb-3 mt-2"><i class="fas fa-calendar-check step-icon"
-                                aria-hidden="true"></i>BOOKING TANGGAL</h4>
+                        <h3 class="h4 text-white mb-3 mt-2"><i class="fas fa-calendar-check step-icon"
+                                aria-hidden="true"></i>BOOKING TANGGAL</h3>
                         <p class="text-dim">Hubungi admin kami via WhatsApp untuk cek ketersediaan slot lapangan di
                             tanggal yang diinginkan.</p>
                     </div>
@@ -1456,8 +1475,8 @@
                 <div class="col-md-4">
                     <div class="step-card" data-aos="fade-up">
                         <span class="step-number">03</span>
-                        <h4 class="text-white mb-3 mt-2"><i class="fas fa-gamepad step-icon"
-                                aria-hidden="true"></i>DATANG & MAIN</h4>
+                        <h3 class="h4 text-white mb-3 mt-2"><i class="fas fa-gamepad step-icon"
+                                aria-hidden="true"></i>DATANG & MAIN</h3>
                         <p class="text-dim">Datang ke lokasi sesuai jadwal. Briefing, pemakaian alat, dan permainan akan
                             dipandu instruktur.</p>
                     </div>
@@ -1477,7 +1496,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="gallery-card" data-aos="fade-up" onclick="openLightbox(this.querySelector('img'))"
                         role="button" tabindex="0" aria-label="Lihat gambar">
-                        <img src="asset/img/kegiatan/kegiatan-outbound-diarea-terbuka.webp" alt="Arena Urban"
+                        <img src="asset/img/kegiatan/kegiatan-outbound-diarea-terbuka.webp" alt="Arena Urban" width="444" height="250"
                             width="400" height="250" loading="lazy">
                         <div class="gallery-overlay"><span class="gallery-title"><i class="fas fa-search-plus me-2"
                                     aria-hidden="true"></i>ZOOM</span></div>
@@ -1495,7 +1514,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="gallery-card" data-aos="fade-up" onclick="openLightbox(this.querySelector('img'))"
                         role="button" tabindex="0" aria-label="Lihat gambar">
-                        <img src="asset/img/kegiatan/diskusi-panitia-untuk-acara-gathering.webp" alt="Equipment"
+                        <img src="asset/img/kegiatan/diskusi-panitia-untuk-acara-gathering.webp" alt="Equipment" width="444" height="250"
                             width="400" height="250" loading="lazy">
                         <div class="gallery-overlay"><span class="gallery-title"><i class="fas fa-search-plus me-2"
                                     aria-hidden="true"></i>ZOOM</span></div>
@@ -1544,7 +1563,7 @@
             <div class="row g-4 align-items-stretch">
                 <div class="col-lg-4 col-md-6">
                     <div class="pricing-card h-100 d-flex flex-column" data-aos="fade-up">
-                        <img src="asset/img/kegiatan/home/fun-games.webp" class="card-img-top"
+                        <img src="asset/img/kegiatan/home/fun-games.webp" class="card-img-top" width="352" height="198"
                             data-aos="fade-up" alt="Paket Fun Outbound" loading="lazy">
                         <h3 class="mb-0">FUN OUTBOUND</h3>
                         <div class="price-tag">150K<span class="price-unit">/ Orang</span></div>
@@ -1574,7 +1593,7 @@
                     <div class="pricing-card h-100 d-flex flex-column" data-aos="fade-up"
                         style="border-color: var(--accent-blue); z-index: 2;">
                         <div class="badge-best">PALING LARIS</div>
-                        <img src="asset/img/kegiatan/home/rafting.webp" class="card-img-top"
+                        <img src="asset/img/kegiatan/home/rafting.webp" class="card-img-top" width="352" height="198"
                             data-aos="fade-up" alt="Paket Fun Rafting" loading="lazy">
                         <h3 class="mb-0 text-blue">FUN RAFTING</h3>
                         <div class="price-tag">225K<span class="price-unit">/ Orang</span></div>
@@ -1603,7 +1622,7 @@
 
                 <div class="col-lg-4 col-md-6 mx-auto">
                     <div class="pricing-card h-100 d-flex flex-column" data-aos="fade-up">
-                        <img src="asset/img/kegiatan/home/corporate-outbound.webp" class="card-img-top"
+                        <img src="asset/img/kegiatan/home/corporate-outbound.webp" class="card-img-top" width="352" height="198"
                             data-aos="fade-up" alt="Paket Corporate Gathering" loading="lazy">
                         <h3 class="mb-0">CORPORATE</h3>
                         <div class="price-tag">350K<span class="price-unit">/ Orang</span></div>
@@ -1652,9 +1671,9 @@
                             <div class="d-flex align-items-center mb-3" style="font-size: 0.85rem; color: var(--accent-yellow);">
                                 <i class="fas fa-calendar-alt me-2"></i> 05 Agu 2024
                             </div>
-                            <h4 class="card-title mb-3" style="font-size: 1.25rem;">
+                            <h3 class="h4 card-title mb-3" style="font-size: 1.25rem;">
                                 <a href="jasa-provider-arung-jeram-corporate-gathering.html" class="text-decoration-none text-light" style="transition: color 0.3s;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color=''">Jasa Provider Arung Jeram Profesional untuk Corporate Gathering</a>
-                            </h4>
+                            </h3>
                             <p class="card-text text-dim mb-4" style="font-size: 0.95rem;">Provider profesional menyediakan instruktur, peralatan safety, dan pendamping medis dalam satu paket yang sangat cocok...</p>
                             <a href="jasa-provider-arung-jeram-corporate-gathering.html" class="mt-auto fw-bold text-decoration-none" style="color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif;">BACA SELENGKAPNYA <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
@@ -1669,9 +1688,9 @@
                             <div class="d-flex align-items-center mb-3" style="font-size: 0.85rem; color: var(--accent-yellow);">
                                 <i class="fas fa-calendar-alt me-2"></i> 12 Jan 2024
                             </div>
-                            <h4 class="card-title mb-3" style="font-size: 1.25rem;">
+                            <h3 class="h4 card-title mb-3" style="font-size: 1.25rem;">
                                 <a href="5-tips-sukses-mengadakan-corporate-gathering.html" class="text-decoration-none text-light" style="transition: color 0.3s;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color=''">5 Tips Sukses Mengadakan Corporate Gathering</a>
-                            </h4>
+                            </h3>
                             <p class="card-text text-dim mb-4" style="font-size: 0.95rem;">Persiapan yang matang adalah kunci kesuksesan gathering perusahaan. Pelajari langkah-langkah penting untuk membuat acara...</p>
                             <a href="5-tips-sukses-mengadakan-corporate-gathering.html" class="mt-auto fw-bold text-decoration-none" style="color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif;">BACA SELENGKAPNYA <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
@@ -1686,9 +1705,9 @@
                             <div class="d-flex align-items-center mb-3" style="font-size: 0.85rem; color: var(--accent-yellow);">
                                 <i class="fas fa-calendar-alt me-2"></i> 08 Feb 2024
                             </div>
-                            <h4 class="card-title mb-3" style="font-size: 1.25rem;">
+                            <h3 class="h4 card-title mb-3" style="font-size: 1.25rem;">
                                 <a href="pentingnya-safety-gear-dalam-kegiatan-rafting.html" class="text-decoration-none text-light" style="transition: color 0.3s;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color=''">Pentingnya Safety Gear dalam Kegiatan Rafting</a>
-                            </h4>
+                            </h3>
                             <p class="card-text text-dim mb-4" style="font-size: 0.95rem;">Keamanan selalu menjadi prioritas utama. Ketahui fungsi helm, pelampung, dan standar keselamatan internasional yang kami...</p>
                             <a href="pentingnya-safety-gear-dalam-kegiatan-rafting.html" class="mt-auto fw-bold text-decoration-none" style="color: var(--accent-blue); font-size: 0.9rem; letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif;">BACA SELENGKAPNYA <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
@@ -1723,7 +1742,7 @@
                                             AS
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h3>
                                             <small class="text-dim">PT Jaya Abadi</small>
                                         </div>
                                     </div>
@@ -1741,7 +1760,7 @@
                                             BS
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h3>
                                             <small class="text-dim">Komunitas Pecinta Alam</small>
                                         </div>
                                     </div>
@@ -1759,7 +1778,7 @@
                                             CL
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h3>
                                             <small class="text-dim">BEM Universitas Y</small>
                                         </div>
                                     </div>
@@ -1783,7 +1802,7 @@
                                             BS
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h3>
                                             <small class="text-dim">Komunitas Pecinta Alam</small>
                                         </div>
                                     </div>
@@ -1801,7 +1820,7 @@
                                             CL
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h3>
                                             <small class="text-dim">BEM Universitas Y</small>
                                         </div>
                                     </div>
@@ -1819,7 +1838,7 @@
                                             DA
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h3>
                                             <small class="text-dim">HRD Bank Z</small>
                                         </div>
                                     </div>
@@ -1843,7 +1862,7 @@
                                             CL
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Citra Lestari</h3>
                                             <small class="text-dim">BEM Universitas Y</small>
                                         </div>
                                     </div>
@@ -1861,7 +1880,7 @@
                                             DA
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h3>
                                             <small class="text-dim">HRD Bank Z</small>
                                         </div>
                                     </div>
@@ -1879,7 +1898,7 @@
                                             AS
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h3>
                                             <small class="text-dim">PT Jaya Abadi</small>
                                         </div>
                                     </div>
@@ -1903,7 +1922,7 @@
                                             DA
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Dian Ayu</h3>
                                             <small class="text-dim">HRD Bank Z</small>
                                         </div>
                                     </div>
@@ -1921,7 +1940,7 @@
                                             AS
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Andi Setiawan</h3>
                                             <small class="text-dim">PT Jaya Abadi</small>
                                         </div>
                                     </div>
@@ -1939,7 +1958,7 @@
                                             BS
                                         </div>
                                         <div class="ms-3">
-                                            <h5 class="text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h5>
+                                            <h3 class="h5 text-white mb-0" style="font-size: 1.1rem;">Budi Santoso</h3>
                                             <small class="text-dim">Komunitas Pecinta Alam</small>
                                         </div>
                                     </div>
@@ -2026,8 +2045,8 @@
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="card-body bg-dark border-top border-secondary" data-aos="fade-up">
-                            <h5 class="text-dark"><i class="fas fa-map-marker-alt text-blue me-2"
-                                    aria-hidden="true"></i>LOKASI BASECAMP</h5>
+                            <h3 class="h5 text-dark"><i class="fas fa-map-marker-alt text-blue me-2"
+                                    aria-hidden="true"></i>LOKASI BASECAMP</h3>
                             <p class="text-dim small mb-0">Jl. Wukir Gg Gor perdamain, Gedang Klutuk, Temas, Kec. Batu, Kota Batu, Jawa Timur 65315</p>
                         </div>
                     </div>
@@ -2131,17 +2150,18 @@
         <div class="position-absolute" style="top: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
         <div class="position-absolute" style="bottom: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
     </section>
+    </main>
 
     <footer>
         <div class="container py-5">
             <div class="row g-4 justify-content-between">
                 <!-- Kolom 1 -->
                 <div class="col-lg-4 col-md-6 mb-4 pe-lg-4">
-                    <h4 class="text-white mb-4 d-flex align-items-center">
-                        <img src="asset/img/logo/logo.png" alt="Logo Gemilang Katun"
+                    <h3 class="h4 text-white mb-4 d-flex align-items-center">
+                        <img src="asset/img/logo/logo.png" alt="Logo Gemilang Katun" width="100" height="48"
                             style="height: 40px; width: auto; margin-right: 15px; object-fit: contain;">
                         GEMILANG KATUN
-                    </h4>
+                    </h3>
                     <p class="text-dim small mb-4 lh-lg">
                         Gemilang Katun Outbound adalah spesialis Outbound terpercaya di Indonesia. Kami
                         membantu perusahaan Anda memberikan kesan profesional melalui program Team Building dan Simulasi
@@ -2152,7 +2172,7 @@
                         <input type="email" class="form-control text-white border-secondary"
                             style="background-color: rgba(255,255,255,0.1);" placeholder="Masukkan email Anda"
                             aria-label="Email">
-                        <button class="btn btn-primary-custom" type="button"
+                        <button class="btn btn-primary-custom" type="button" aria-label="Kirim email"
                             onclick="const email = this.previousElementSibling.value; if(email && email.includes('@')) { alert('Terima kasih! Email ' + email + ' telah berhasil didaftarkan untuk menerima info dan promo terbaru kami.'); this.previousElementSibling.value = ''; } else { alert('Mohon masukkan alamat email yang valid.'); }"><i
                                 class="fas fa-paper-plane"></i></button>
                     </div>
@@ -2160,7 +2180,7 @@
 
                 <!-- Kolom 2 -->
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="text-white mb-4">Tautan Cepat</h5>
+                    <h4 class="h5 text-white mb-4">Tautan Cepat</h4>
                     <ul class="list-unstyled text-dim small lh-lg">
                         <li class="mb-2"><a href="/" class="text-decoration-none text-dim"><i
                                     class="fas fa-chevron-right me-2"></i>Home</a></li>
@@ -2177,7 +2197,7 @@
 
                 <!-- Kolom 3 -->
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="text-white mb-4">Layanan Kami</h5>
+                    <h4 class="h5 text-white mb-4">Layanan Kami</h4>
                     <ul class="list-unstyled text-dim small lh-lg">
                         <li class="mb-2"><a href="paket-basic.html" class="text-decoration-none text-dim"><i
                                     class="fas fa-chevron-right me-2"></i>Paket Basic War</a></li>
@@ -2192,7 +2212,7 @@
 
                 <!-- Kolom 4 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-white mb-4">Hubungi Kami</h5>
+                    <h4 class="h5 text-white mb-4">Hubungi Kami</h4>
                     <ul class="list-unstyled text-dim small lh-lg mb-4">
                         <li class="mb-3 d-none">
                             <div class="me-3 mt-1 flex-shrink-0"><i
@@ -2241,15 +2261,15 @@
                 <small class="text-dim mb-3 mb-md-0 text-center text-md-start">Â© Hak Cipta <strong>Gemilang Katun
                         Outbound</strong> Semua Hak Dilindungi Undang-Undang</small>
                 <div class="d-flex flex-wrap justify-content-center gap-3 gap-md-4 small">
-                    <a href="#" class="text-dim text-decoration-none">Kebijakan Privasi</a>
-                    <a href="#" class="text-dim text-decoration-none">Syarat & Ketentuan</a>
-                    <a href="#" class="text-dim text-decoration-none">Kebijakan Cookie</a>
+                    <a href="kebijakan-privasi.html" class="text-dim text-decoration-none">Kebijakan Privasi</a>
+                    <a href="syarat-ketentuan.html" class="text-dim text-decoration-none">Syarat & Ketentuan</a>
+                    <a href="kebijakan-cookie.html" class="text-dim text-decoration-none">Kebijakan Cookie</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="asset/js/bootstrap.bundle.min.js" defer></script>
 
     <script>
         // Lightbox Gallery
@@ -2288,14 +2308,22 @@
         });
     </script>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Modern Non-Reflow Scroll Animations (Replaces heavy AOS.js geometry reads) -->
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'slide',
-            once: true,
-            offset: 50
+        document.addEventListener('DOMContentLoaded', function () {
+            if ('IntersectionObserver' in window) {
+                const aosObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('aos-animate');
+                            aosObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -50px 0px' });
+                document.querySelectorAll('[data-aos]').forEach(el => aosObserver.observe(el));
+            } else {
+                document.querySelectorAll('[data-aos]').forEach(el => el.classList.add('aos-animate'));
+            }
         });
     </script>
 

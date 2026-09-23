@@ -1,0 +1,54 @@
+/* FontAwesome Subset - Gemilang Katun */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/fa-solid-900.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/fa-brands-400.woff2') format('woff2');
+}
+.fa,.fas,.fab{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display,inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+.fas,.fa-solid{
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+.fab,.fa-brands{
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+}
+.fa-arrow-up:before{content:"\f062"}
+.fa-whatsapp:before{content:"\f232"}
+.fa-tags:before{content:"\f02c"}
+.fa-images:before{content:"\f302"}
+.fa-crosshairs:before{content:"\f05b"}
+.fa-calendar-check:before{content:"\f274"}
+.fa-gamepad:before{content:"\f11b"}
+.fa-search-plus:before{content:"\f00e"}
+.fa-check:before{content:"\f00c"}
+.fa-arrow-right:before{content:"\f061"}
+.fa-star:before{content:"\f005"}
+.fa-shower:before{content:"\f2cc"}
+.fa-mosque:before{content:"\f678"}
+.fa-utensils:before{content:"\f2e7"}
+.fa-map-marker-alt:before{content:"\f3c5"}
+.fa-paper-plane:before{content:"\f1d8"}
+.fa-chevron-right:before{content:"\f054"}
+.fa-envelope:before{content:"\f0e0"}
+.fa-facebook-f:before{content:"\f39e"}
+.fa-instagram:before{content:"\f16d"}
+.fa-tiktok:before{content:"\e07b"}
+.fa-youtube:before{content:"\f167"}

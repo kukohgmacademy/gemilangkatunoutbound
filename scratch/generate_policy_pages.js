@@ -1,0 +1,226 @@
+const fs = require('fs');
+
+function createPage(title, heading, contentHtml, canonicalSlug) {
+  return `<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>${title} - GEMILANG KATUN Outbound</title>
+    <meta name="description" content="${title} Gemilang Katun Outbound Batu dan Malang. Kebijakan dan informasi resmi untuk pengguna jasa kami.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#800000">
+
+    <link rel="canonical" href="https://gemilangkatunoutbound.web.id/${canonicalSlug}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="asset/img/logo/favicon.webp">
+    <link rel="icon" type="image/png" href="asset/img/logo/logo.png">
+
+    <!-- CSS Lokal -->
+    <link rel="stylesheet" href="asset/css/fonts.css">
+    <link rel="stylesheet" href="asset/css/bootstrap-purged.min.css">
+    <link rel="stylesheet" href="asset/css/fontawesome-subset.css">
+
+    <style>
+        :root {
+            --bg-darkest: #ffffff;
+            --bg-main: #f8f9fa;
+            --accent-blue: #800000;
+            --accent-yellow: #b30000;
+            --accent-green: #25d366;
+            --text-light: #212529;
+            --text-dim: #495057;
+            --border-color: #e9ecef;
+        }
+
+        body {
+            background-color: var(--bg-darkest);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            padding-top: 70px;
+        }
+
+        h1, h2, h3, h4, .btn, .nav-link {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navbar {
+            background-color: #800000 !important;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.5rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #0b0f19 0%, #1e293b 100%);
+            padding: 60px 0;
+            color: white;
+            border-bottom: 3px solid var(--accent-blue);
+        }
+
+        .content-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        .content-box h2 {
+            color: var(--accent-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background: #4d0000 !important;
+            color: #ffffff !important;
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #e9ecef !important;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/" aria-label="Homepage Gemilang Katun">
+                <img src="asset/img/logo/logo.png" alt="Logo Gemilang Katun" width="100" height="48"
+                    style="height: 40px; width: auto; object-fit: contain;" class="me-2">
+                <span>GEMILANG KATUN</span>
+            </a>
+            <div class="ms-auto d-flex">
+                <a href="/" class="nav-link">BERANDA</a>
+                <a href="about.html" class="nav-link">TENTANG KAMI</a>
+                <a href="paket.html" class="nav-link">PAKET</a>
+                <a href="blog.html" class="nav-link">BLOG</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-white mb-2">${heading}</h1>
+            <p class="text-white-50 mb-0">Informasi Resmi Layanan Gemilang Katun Outbound</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <article class="content-box">
+                    ${contentHtml}
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="border-top border-secondary pt-4 mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <small class="text-white-50 mb-3 mb-md-0">Â© Hak Cipta <strong>Gemilang Katun Outbound</strong> Semua Hak Dilindungi Undang-Undang</small>
+                <div class="d-flex flex-wrap justify-content-center gap-3 small">
+                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                    <a href="syarat-ketentuan.html">Syarat &amp; Ketentuan</a>
+                    <a href="kebijakan-cookie.html">Kebijakan Cookie</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>`;
+}
+
+const privasiContent = `
+<h2>1. Pendahuluan</h2>
+<p>Gemilang Katun Outbound menghargai dan melindungi privasi setiap pengunjung situs kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi yang Anda berikan saat mengakses situs gemilangkatunoutbound.web.id.</p>
+
+<h2>2. Informasi yang Kami Kumpulkan</h2>
+<p>Kami dapat mengumpulkan informasi kontak seperti nama, alamat email, dan nomor WhatsApp ketika Anda mengisi formulir pemesanan, berlangganan newsletter, atau menghubungi layanan pelanggan kami secara sukarela.</p>
+
+<h2>3. Penggunaan Informasi</h2>
+<p>Informasi yang kami kumpulkan digunakan untuk:</p>
+<ul>
+    <li>Memproses reservasi kegiatan outbound, gathering, atau rafting Anda.</li>
+    <li>Memberikan penawaran harga resmi dan konsultasi jadwal kegiatan.</li>
+    <li>Mengirimkan informasi promosi berkala yang relevan (jika disetujui).</li>
+    <li>Meningkatkan kualitas layanan serta pengalaman pengguna di situs kami.</li>
+</ul>
+
+<h2>4. Keamanan Data</h2>
+<p>Kami menerapkan prosedur keamanan standar industri untuk mencegah akses tidak sah, pengungkapan, atau penyalahgunaan data pribadi Anda. Kami tidak akan menjual atau membagikan data pribadi Anda kepada pihak ketiga tanpa izin Anda, kecuali diwajibkan oleh hukum yang berlaku di Indonesia.</p>
+
+<h2>5. Kontak Kami</h2>
+<p>Jika Anda memiliki pertanyaan seputar Kebijakan Privasi ini, silakan hubungi tim kami via WhatsApp di 0822-1122-1909 atau email ke booking@gemilangkatun.com.</p>
+`;
+
+const syaratContent = `
+<h2>1. Ketentuan Umum</h2>
+<p>Dengan mengakses situs ini dan memesan paket kegiatan melalui Gemilang Katun Outbound, Anda setuju untuk terikat oleh syarat dan ketentuan yang berlaku.</p>
+
+<h2>2. Pemesanan dan Pembayaran</h2>
+<p>Pemesanan tanggal kegiatan dianggap sah setelah konfirmasi ketersediaan dari pihak Gemilang Katun serta pembayaran uang muka (Down Payment/DP) sesuai kesepakatan bersama. Pelunasan biaya kegiatan wajib diselesaikan sesuai jadwal yang tertera pada invoice resmi.</p>
+
+<h2>3. Pembatalan dan Penjadwalan Ulang</h2>
+<p>Permintaan perubahan jadwal (reschedule) dapat dilakukan dengan pemberitahuan tertulis selambat-lambatnya 7 (tujuh) hari sebelum tanggal kegiatan, tergantung ketersediaan venue dan fasilitator. Pembatalan sepihak dapat dikenakan biaya administrasi sesuai kebijakan paket terkait.</p>
+
+<h2>4. Keselamatan dan Kepatuhan</h2>
+<p>Seluruh peserta diwajibkan mematuhi standar keselamatan dan instruksi yang diberikan oleh pemandu dan fasilitator profesional kami selama kegiatan berlangsung. Kami menyediakan standar peralatan safety gear resmi untuk kegiatan luar ruang dan rafting.</p>
+
+<h2>5. Hukum yang Berlaku</h2>
+<p>Syarat dan ketentuan ini diatur dan ditafsirkan sesuai dengan hukum yang berlaku di Republik Indonesia.</p>
+`;
+
+const cookieContent = `
+<h2>1. Apa Itu Cookie?</h2>
+<p>Cookie adalah file teks kecil yang disimpan pada perangkat komputer atau ponsel Anda saat mengunjungi situs web kami. Cookie membantu situs bekerja lebih efisien serta memberikan informasi statistik bagi pengelola situs.</p>
+
+<h2>2. Jenis Cookie yang Kami Gunakan</h2>
+<ul>
+    <li><strong>Cookie Esensial:</strong> Diperlukan agar fitur inti situs web dapat beroperasi secara normal (seperti navigasi halaman dan formulir pemesanan).</li>
+    <li><strong>Cookie Performa & Analitik:</strong> Membantu kami memahami bagaimana pengunjung berinteraksi dengan situs sehingga kami dapat terus mengoptimalkan kecepatan muat halaman dan kualitas konten.</li>
+</ul>
+
+<h2>3. Pengelolaan Cookie</h2>
+<p>Anda dapat mengontrol atau menghapus cookie melalui pengaturan browser web Anda kapan saja. Perlu diperhatikan bahwa menonaktifkan cookie tertentu dapat mempengaruhi kelancaran navigasi pada beberapa bagian situs.</p>
+`;
+
+fs.writeFileSync('kebijakan-privasi.html', createPage('Kebijakan Privasi', 'Kebijakan Privasi', privasiContent, 'kebijakan-privasi.html'), 'utf8');
+fs.writeFileSync('syarat-ketentuan.html', createPage('Syarat & Ketentuan', 'Syarat & Ketentuan Layanan', syaratContent, 'syarat-ketentuan.html'), 'utf8');
+fs.writeFileSync('kebijakan-cookie.html', createPage('Kebijakan Cookie', 'Kebijakan Penggunaan Cookie', cookieContent, 'kebijakan-cookie.html'), 'utf8');
+
+console.log('Successfully generated kebijakan-privasi.html, syarat-ketentuan.html, kebijakan-cookie.html');
